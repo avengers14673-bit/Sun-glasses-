@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b0f">
+  <meta name="description" content="VISION VAULT — premium eyewear, sunglasses and optical frames. See your style.">
+  <title>VISION VAULT — See Your Style</title>
+  <style>
+    :root{--bg:#07090c;--panel:#0d1117;--panel2:#111821;--line:#26313d;--text:#f4f7fb;--muted:#aab7c7;--blue:#65c8ff;--blue2:#168bd2;--gold:#c8d7e8}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}
+    .wrap{width:min(1200px,92%);margin:auto}.topline{background:#0b1118;border-bottom:1px solid var(--line);text-align:center;padding:7px 12px;color:#c6d6e5;font-size:11px;letter-spacing:1.5px}
+    header{position:sticky;top:0;z-index:20;background:rgba(6,8,11,.94);backdrop-filter:blur(16px);border-bottom:1px solid #202a35}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;min-width:max-content}.mark{width:39px;height:39px;border:1px solid #8ad7ff;border-radius:50% 50% 45% 45%;display:grid;place-items:center;color:var(--blue);font-size:21px;transform:rotate(45deg)}.mark span{transform:rotate(-45deg)}.brand strong{display:block;font-size:18px;letter-spacing:4px;font-weight:650}.brand small{display:block;font-size:8px;letter-spacing:3px;color:var(--muted);text-align:center;margin-top:2px}.links{display:flex;align-items:center;gap:24px;font-size:11px;letter-spacing:1px;color:#d7e0e9}.links a:hover{color:var(--blue)}.nav-actions{display:flex;align-items:center;gap:10px}.iconbtn{background:none;border:1px solid #2b3540;color:white;border-radius:50%;width:38px;height:38px}.cart-pill{font-size:12px;border:1px solid #2b3540;padding:9px 12px;border-radius:22px;white-space:nowrap}
+    .hero{position:relative;min-height:510px;display:grid;grid-template-columns:1fr 1fr;align-items:center;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 70% 42%,#18364a 0,transparent 35%),linear-gradient(110deg,#090d12 0%,#101922 48%,#05070a 100%)}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,7,10,.05),rgba(4,7,10,.06) 60%,rgba(4,7,10,.7));pointer-events:none}
+    .hero-copy{position:relative;z-index:2;padding:64px 0}.eyebrow{font-size:11px;letter-spacing:4px;color:var(--blue);font-weight:700}.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(50px,7vw,92px);line-height:.91;letter-spacing:-2px;margin:17px 0}.hero h1 span{display:block;color:var(--blue)}.hero p{max-width:420px;color:#c0cbd7;font-size:15px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;border-radius:30px;padding:12px 20px;border:1px solid #7dd2ff;background:linear-gradient(120deg,#8ddcff,#238dc9);color:#04111a;font-size:11px;font-weight:800;letter-spacing:1px;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.ghost{background:transparent;color:#f1f7fc;border-color:#66798b}.hero-art{height:100%;min-height:430px;position:relative;display:flex;align-items:center;justify-content:center;z-index:1}.lens-orbit{position:absolute;width:min(39vw,410px);aspect-ratio:1;border:1px solid rgba(111,202,255,.3);border-radius:50%;box-shadow:0 0 80px rgba(49,155,218,.13),inset 0 0 55px rgba(49,155,218,.08)}.glasses{position:relative;width:min(88%,490px);filter:drop-shadow(0 24px 25px #000);transform:rotate(-8deg)}.glasses svg{width:100%;height:auto;overflow:visible}.hero-tag{position:absolute;right:5%;bottom:16%;border:1px solid #40566b;background:rgba(7,13,19,.8);padding:13px 17px;border-radius:8px;font-size:11px;letter-spacing:1px}.hero-tag b{display:block;color:var(--blue);font-size:14px}
+    .trustbar{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);padding:20px 0;gap:12px}.trust{display:flex;align-items:center;justify-content:center;gap:10px;color:#c9d5e0;font-size:12px}.trust .ico{font-size:21px;color:var(--blue)}
+    section{padding:68px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:24px}.section-head h2{font-size:clamp(26px,4vw,38px);font-weight:500;letter-spacing:1px;margin:5px 0 0}.section-head p{color:var(--muted);margin:4px 0 0;font-size:13px}.tiny-link{font-size:12px;color:var(--blue);white-space:nowrap}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.category{border:1px solid var(--line);border-radius:12px;padding:23px 18px;background:linear-gradient(145deg,#101720,#090c10);transition:.25s}.category:hover{border-color:#62bfea;transform:translateY(-4px)}.cat-icon{font-size:28px;margin-bottom:18px}.category h3{margin:0 0 4px;font-size:15px}.category p{margin:0;color:var(--muted);font-size:12px}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.product{background:#0c1015;border:1px solid #222d38;border-radius:12px;overflow:hidden;transition:.25s}.product:hover{transform:translateY(-4px);border-color:#5289a9}.product-art{height:205px;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 50%,#263543,#10161d 57%,#090b0e);position:relative;overflow:hidden}.product-art:after{content:"";position:absolute;bottom:17px;width:75%;height:12px;background:#000;filter:blur(13px);border-radius:50%}.product-art svg{width:88%;max-height:155px;position:relative;z-index:1;filter:drop-shadow(0 16px 10px #000)}.tag{position:absolute;top:12px;left:12px;z-index:2;background:#d3eaff;color:#07111a;padding:4px 8px;border-radius:4px;font-size:9px;font-weight:800;letter-spacing:1px}.product-info{padding:15px}.product-info h3{font-size:14px;margin:0}.product-info .sub{font-size:11px;color:var(--muted);margin:3px 0 12px}.price-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:13px}.price{font-size:16px;font-weight:750}.old{color:#728090;text-decoration:line-through;font-size:11px;margin-left:5px}.add{width:100%;border:1px solid #60778a;background:transparent;color:#edf7ff;border-radius:7px;padding:10px;font-size:11px;letter-spacing:.7px}.add:hover{background:#173246;border-color:var(--blue)}
+    .feature-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:16px}.feature{border:1px solid var(--line);border-radius:12px;padding:24px;background:linear-gradient(145deg,#121a22,#090c10);min-height:205px;position:relative;overflow:hidden}.feature h3{font-size:19px;margin:0 0 8px}.feature p{color:var(--muted);font-size:13px;max-width:290px}.feature .bigicon{font-size:32px;color:var(--blue);margin-bottom:15px}.feature.highlight{background:radial-gradient(ellipse at 90% 10%,#1c4b68,transparent 55%),linear-gradient(135deg,#101923,#080b0f)}.feature .btn{margin-top:10px}
+    .newsletter{background:#0c131a;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:38px 0}.news-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}.news-inner h2{font-size:23px;margin:0 0 5px}.news-inner p{margin:0;color:var(--muted);font-size:13px}.subscribe{display:flex;gap:8px;width:min(420px,100%)}.subscribe input{min-width:0;flex:1;background:#080b0f;border:1px solid #354454;border-radius:25px;padding:12px 16px;color:white;outline:none}.subscribe input:focus{border-color:var(--blue)}
+    footer{padding:35px 0 22px}.foot-top{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.foot-note{color:var(--muted);font-size:12px;max-width:310px}.foot-links{display:flex;gap:17px;flex-wrap:wrap;font-size:12px;color:#c6d1dc}.copyright{border-top:1px solid #202a34;margin-top:28px;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#778797;font-size:10px}
+    .whatsapp{position:fixed;bottom:18px;right:18px;z-index:30;border:1px solid #3bda8b;background:#0b2018;color:#eafff3;border-radius:28px;padding:12px 17px;box-shadow:0 10px 30px #0009;font-size:12px;font-weight:700}.notice{position:fixed;bottom:76px;left:50%;transform:translateX(-50%);background:#e3f5ff;color:#07111a;padding:11px 18px;border-radius:9px;font-size:13px;box-shadow:0 8px 30px #0009;z-index:40;display:none;max-width:90%;text-align:center}.notice.show{display:block}.mobile-menu{display:none}
+    @media(max-width:900px){.links{gap:13px}.hero{min-height:440px}.hero-art{min-height:350px}.products{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(2,1fr)}.feature-grid{grid-template-columns:1fr 1fr}.feature:first-child{grid-column:span 2}}
+    @media(max-width:650px){.topline{font-size:9px;letter-spacing:1px}.nav{height:66px}.brand strong{font-size:14px;letter-spacing:2.5px}.brand small{letter-spacing:2px}.mark{width:32px;height:32px}.links{display:none}.mobile-menu{display:block}.nav-actions{gap:6px}.iconbtn{width:34px;height:34px}.cart-pill{padding:8px 10px;font-size:10px}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:48px 0 10px}.hero h1{font-size:clamp(54px,15vw,78px)}.hero p{font-size:14px}.hero-art{min-height:270px;margin-top:-4px}.lens-orbit{width:250px}.glasses{width:min(94%,390px)}.hero-tag{right:2%;bottom:8%;font-size:9px;padding:9px 11px}.trustbar{grid-template-columns:repeat(2,1fr);padding:15px 0}.trust{justify-content:flex-start;font-size:11px}.trust .ico{font-size:18px}section{padding:48px 0}.section-head{align-items:start}.section-head h2{font-size:27px}.categories{gap:9px}.category{padding:17px 13px}.cat-icon{margin-bottom:11px}.products{gap:10px}.product-art{height:155px}.product-info{padding:11px}.product-info h3{font-size:12px}.price{font-size:14px}.old{display:block;margin:1px 0 0}.add{font-size:10px;padding:9px 4px}.feature-grid{grid-template-columns:1fr}.feature:first-child{grid-column:auto}.feature{min-height:170px;padding:20px}.news-inner{align-items:flex-start;flex-direction:column}.subscribe{width:100%}.foot-top{flex-direction:column}.whatsapp{right:12px;bottom:12px;padding:11px 14px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topline">PREMIUM EYEWEAR • EVERYDAY COMFORT • YOUR STYLE, YOUR VISION</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Vision Vault home"><div class="mark"><span>V</span></div><div><strong>VISION VAULT</strong><small>SEE YOUR STYLE</small></div></a>
+      <nav class="links" aria-label="Main navigation"><a href="#home">HOME</a><a href="#shop">SHOP</a><a href="#categories">CATEGORIES</a><a href="#tryon">TRY ON</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></nav>
+      <div class="nav-actions"><button class="iconbtn mobile-menu" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})" aria-label="Browse categories">☰</button><button class="iconbtn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})" aria-label="Search products">⌕</button><button class="cart-pill" onclick="showCart()">BAG <span id="cartCount">0</span></button></div>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-copy">
+        <div class="eyebrow">PREMIUM EYEWEAR & OPTICALS</div>
+        <h1>SEE YOUR <span>STYLE.</span></h1>
+        <p>From timeless classics to bold modern frames — find the pair that feels unmistakably you.</p>
+        <div class="actions"><a class="btn" href="#shop">EXPLORE COLLECTION <span>↗</span></a><a class="btn ghost" href="#categories">FIND YOUR FRAME</a></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of premium sunglasses">
+        <div class="lens-orbit"></div>
+        <div class="glasses">
+          <svg viewBox="0 0 600 260" role="img" aria-label="Stylish black sunglasses illustration">
+            <defs><linearGradient id="frame" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#b8c7d3"/><stop offset=".18" stop-color="#202c38"/><stop offset=".55" stop-color="#050709"/><stop offset=".82" stop-color="#526474"/><stop offset="1" stop-color="#11171d"/></linearGradient><linearGradient id="lens" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#74d8ff" stop-opacity=".85"/><stop offset=".38" stop-color="#142b3c" stop-opacity=".95"/><stop offset="1" stop-color="#020509"/></linearGradient></defs>
+            <path d="M55 58 Q145 32 254 62 L240 170 Q229 220 166 222 Q102 221 81 175 Z" fill="url(#lens)" stroke="url(#frame)" stroke-width="17" stroke-linejoin="round"/>
+            <path d="M346 62 Q455 32 545 58 L519 175 Q498 221 434 222 Q371 220 360 170 Z" fill="url(#lens)" stroke="url(#frame)" stroke-width="17" stroke-linejoin="round"/>
+            <path d="M253 67 Q300 45 347 67 L343 87 Q300 74 257 87 Z" fill="url(#frame)"/>
+            <path d="M65 62 L8 37 Q0 34 2 48 L61 100" fill="none" stroke="url(#frame)" stroke-width="15" stroke-linecap="round"/>
+            <path d="M535 62 L592 37 Q600 34 598 48 L539 100" fill="none" stroke="url(#frame)" stroke-width="15" stroke-linecap="round"/>
+            <path d="M88 79 Q145 56 210 74" stroke="#a7e8ff" stroke-opacity=".65" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <path d="M380 74 Q445 56 512 79" stroke="#a7e8ff" stroke-opacity=".65" stroke-width="7" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="hero-tag"><b>YOUR LOOK. YOUR RULES.</b>Find your signature frame</div>
+      </div>
+    </section>
+    <div class="wrap trustbar">
+      <div class="trust"><span class="ico">◇</span><span><b>Quality First</b><br>Made for everyday wear</span></div>
+      <div class="trust"><span class="ico">✓</span><span><b>Style for Everyone</b><br>Frames for every mood</span></div>
+      <div class="trust"><span class="ico">↗</span><span><b>Easy Enquiries</b><br>Chat with our team</span></div>
+      <div class="trust"><span class="ico">♡</span><span><b>Personal Service</b><br>Find your perfect fit</span></div>
+    </div>
+    <section id="categories">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">EXPLORE YOUR LOOK</div><h2>SHOP BY CATEGORY</h2><p>A frame for every side of you.</p></div></div>
+        <div class="categories">
+          <a class="category" href="#shop" onclick="filterProducts('Sunglasses')"><div class="cat-icon">🕶️</div><h3>Sunglasses</h3><p>Everyday cool, all-day shade</p></a>
+          <a class="category" href="#shop" onclick="filterProducts('Optical')"><div class="cat-icon">👓</div><h3>Optical Frames</h3><p>Comfort meets character</p></a>
+          <a class="category" href="#shop" onclick="filterProducts('Blue Light')"><div class="cat-icon">◉</div><h3>Blue-Light Style</h3><p>For your digital days</p></a>
+          <a class="category" href="#shop" onclick="filterProducts('All')"><div class="cat-icon">✦</div><h3>All Collections</h3><p>Explore every frame</p></a>
+        </div>
+      </div>
+    </section>
+    <section id="shop" style="background:linear-gradient(180deg,#090c10,#0a0e13)">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">THE EDIT</div><h2>TRENDING FRAMES</h2><p>Discover the styles everyone is talking about.</p></div><a class="tiny-link" href="#shop" onclick="filterProducts('All')">VIEW ALL ↗</a></div>
+        <div class="products" id="productGrid"></div>
+      </div>
+    </section>
+    <section id="tryon">
+      <div class="wrap feature-grid">
+        <div class="feature highlight"><div class="bigicon">◉</div><h3>Find your frame.</h3><p>Not sure what suits you? Ask us for personal recommendations before you choose.</p><a class="btn" href="#contact">GET STYLE HELP ↗</a></div>
+        <div class="feature" id="about"><div class="bigicon">✧</div><h3>Style with confidence.</h3><p>Explore versatile looks, compare frame styles and choose what feels right for you.</p><p><strong>Simple. Stylish. You.</strong></p></div>
+        <div class="feature"><div class="bigicon">☏</div><h3>Real help, real people.</h3><p>Questions about sizes, availability or prescription options? Contact the shop directly.</p><a class="tiny-link" href="#contact">CONTACT OUR TEAM →</a></div>
+      </div>
+    </section>
+    <div class="newsletter" id="contact">
+      <div class="wrap news-inner"><div><h2>YOUR NEXT FAVOURITE FRAME AWAITS.</h2><p>Send us an enquiry and we'll help you find your look.</p></div><div class="subscribe"><input id="enquiry" type="text" placeholder="What are you looking for?" aria-label="Your eyewear enquiry"><button class="btn" onclick="sendEnquiry()">ENQUIRE ↗</button></div></div>
+    </div>
+  </main>
+  <footer><div class="wrap">
+    <div class="foot-top"><div><a class="brand" href="#home"><div class="mark"><span>V</span></div><div><strong>VISION VAULT</strong><small>SEE YOUR STYLE</small></div></a><p class="foot-note">Eyewear that brings your personality into focus. Discover your next everyday essential.</p></div><div class="foot-links"><a href="#shop">Shop frames</a><a href="#categories">Categories</a><a href="#tryon">Style help</a><a href="#contact">Contact</a></div></div>
+    <div class="copyright"><span>© <span id="year"></span> VISION VAULT. ALL RIGHTS RESERVED.</span><span>SEE YOUR STYLE • OWN YOUR VISION</span></div>
+  </div></footer>
+  <button class="whatsapp" onclick="whatsappHelp()">☏ &nbsp; CHAT WITH US</button>
+  <div class="notice" id="notice" role="status" aria-live="polite"></div>
+  <script>
+    // Demo catalogue: replace names/prices with the shop's real products before publishing.
+    const products = [
+      {id:1,name:"Aero Black",type:"Sunglasses",desc:"Classic • Unisex",price:1299,old:1599,tag:"POPULAR",shape:"square",lens:"#101d29",frame:"#aab8c4"},
+      {id:2,name:"Luna Gold",type:"Optical",desc:"Lightweight • Everyday",price:999,old:1299,tag:"NEW",shape:"round",lens:"#1b2025",frame:"#c9a86c"},
+      {id:3,name:"Velocity Blue",type:"Sunglasses",desc:"Sport • Bold",price:1699,old:1999,tag:"TRENDING",shape:"sport",lens:"#0879a8",frame:"#91a9b9"},
+      {id:4,name:"Metro Clear",type:"Blue Light",desc:"Modern • Work-ready",price:899,old:1099,tag:"DAILY PICK",shape:"square",lens:"#23313b",frame:"#303d48"},
+      {id:5,name:"Retro Round",type:"Sunglasses",desc:"Vintage • Statement",price:1199,old:1499,tag:"CLASSIC",shape:"round",lens:"#211b17",frame:"#b68a52"},
+      {id:6,name:"Urban Slate",type:"Optical",desc:"Minimal • Versatile",price:1099,old:1399,tag:"FAVOURITE",shape:"square",lens:"#1a2732",frame:"#687d8b"},
+      {id:7,name:"Skyline Blue",type:"Blue Light",desc:"Digital • Lightweight",price:799,old:999,tag:"SMART PICK",shape:"round",lens:"#18384b",frame:"#9bb6c8"},
+      {id:8,name:"Night Rider",type:"Sunglasses",desc:"Bold • Weekend",price:1499,old:1799,tag:"LIMITED LOOK",shape:"sport",lens:"#111b26",frame:"#bac7d2"}
+    ];
+    let cart = [];
+    function frameSVG(p){
+      let shape=p.shape, lens=p.lens, frame=p.frame;
+      let left,right;
+      if(shape==="round"){left='<circle cx="95" cy="78" r="42" fill="'+lens+'" stroke="'+frame+'" stroke-width="9"/>';right='<circle cx="205" cy="78" r="42" fill="'+lens+'" stroke="'+frame+'" stroke-width="9"/>';}
+      else if(shape==="sport"){left='<path d="M35 47 Q90 30 135 48 L126 105 Q85 123 54 99 Z" fill="'+lens+'" stroke="'+frame+'" stroke-width="9"/>';right='<path d="M165 48 Q210 30 265 47 L246 99 Q215 123 174 105 Z" fill="'+lens+'" stroke="'+frame+'" stroke-width="9"/>';}
+      else{left='<path d="M42 43 Q88 32 135 47 L126 102 Q92 119 60 99 Z" fill="'+lens+'" stroke="'+frame+'" stroke-width="9"/>';right='<path d="M165 47 Q212 32 258 43 L240 99 Q208 119 174 102 Z" fill="'+lens+'" stroke="'+frame+'" stroke-width="9"/>';}
+      return '<svg viewBox="0 0 300 155" aria-label="'+p.name+' glasses"><path d="M8 38 L45 51 M255 51 L292 38" stroke="'+frame+'" stroke-width="9" stroke-linecap="round"/>'+left+right+'<path d="M132 50 Q150 40 168 50" stroke="'+frame+'" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M56 53 Q80 44 110 52" stroke="#d4f2ff" stroke-opacity=".45" stroke-width="4" fill="none" stroke-linecap="round"/></svg>';
+    }
+    function renderProducts(list=products){
+      const grid=document.getElementById('productGrid');
+      grid.innerHTML=list.map(p=>`<article class="product"><div class="product-art"><span class="tag">${p.tag}</span>${frameSVG(p)}</div><div class="product-info"><h3>${p.name}</h3><div class="sub">${p.desc} · ${p.type}</div><div class="price-row"><div class="price">₹${p.price.toLocaleString('en-IN')} <span class="old">₹${p.old.toLocaleString('en-IN')}</span></div></div><button class="add" onclick="addToCart(${p.id})">＋ &nbsp; ADD TO BAG</button></div></article>`).join('');
+    }
+    function filterProducts(type){let list=type==='All'?products:products.filter(p=>p.type===type);renderProducts(list);setTimeout(()=>document.getElementById('shop').scrollIntoView({behavior:'smooth'}),30)}
+    function addToCart(id){cart.push(products.find(p=>p.id===id));document.getElementById('cartCount').textContent=cart.length;notice(products.find(p=>p.id===id).name+' added to your bag.');}
+    function showCart(){if(!cart.length){notice('Your bag is empty — explore the collection first.');return}let total=cart.reduce((sum,p)=>sum+p.price,0);let items=cart.map(p=>p.name+' — ₹'+p.price.toLocaleString('en-IN')).join('\\n');let message='Hi VISION VAULT! I am interested in:\\n'+items+'\\nTotal: ₹'+total.toLocaleString('en-IN')+'\\nPlease confirm availability.';if(confirm('Your bag has '+cart.length+' item(s), total ₹'+total.toLocaleString('en-IN')+'. Press OK to enquire on WhatsApp.'))openWhatsApp(message)}
+    function notice(msg){const el=document.getElementById('notice');el.textContent=msg;el.classList.add('show');clearTimeout(window.noticeTimer);window.noticeTimer=setTimeout(()=>el.classList.remove('show'),2800)}
+    // IMPORTANT: Replace this placeholder with the shop's WhatsApp number, including country code, digits only.
+    const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+    function openWhatsApp(message){if(WHATSAPP_NUMBER.includes('X')){notice('Demo mode: add your shop WhatsApp number in the code to enable chat.');return}window.open('https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent(message),'_blank','noopener')}
+    function whatsappHelp(){openWhatsApp('Hi VISION VAULT! I would like help choosing eyewear.');}
+    function sendEnquiry(){let q=document.getElementById('enquiry').value.trim();if(!q){notice('Type what kind of eyewear you are looking for first.');return}openWhatsApp('Hi VISION VAULT! My eyewear enquiry: '+q)}
+    document.getElementById('year').textContent=new Date().getFullYear();
+    renderProducts();
+  </script>
+</body>
+</html>
